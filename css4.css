@@ -1,0 +1,224 @@
+.top{
+    height:50px;
+    background-color: #333;
+    line-height:50px;
+    color: #b0b0b0;
+
+}
+.top-left li
+{
+    float: left;
+    margin: 0 15px;
+    position: relative;
+}
+.top-left a{
+    color: #b0b0b0;
+    display: block;
+}
+.top-left li a:hover{
+   color: #f4f4f4;
+}
+.top-right li{
+
+    float: right;
+    margin-right: 20px;
+
+}
+.top-right li a{
+    display: block;
+    color: #b0b0b0;
+}
+.top-right li a:hover{
+   color: #f4f4f4;
+}
+.top-right li:first-child:hover{
+    background-color: orange;
+}
+.top-left .App{
+    width: 150px;
+    height: 150px;
+    background-color:#b0b0b0;
+    position: absolute;
+    left: -35px;
+    display: none;
+    color: #000000;
+}
+.top-left .App img{
+    width:70px;
+    height:70px;
+    display: block;
+    margin:10px auto;
+}
+.top-left .App{
+    text-align: center;
+}
+.top-left li:nth-child(9):hover .App{
+  display: block;
+    z-index: 9999;
+
+}
+.top-left li:nth-child(9):hover .xia::after{
+    display: block;
+}
+.xia::after{
+    content: '';
+    width:0;
+    height: 0;
+    border:8px solid transparent;
+    border-top:none;
+    border-bottom-color: #B8D1EA;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: none;
+}
+.header-left{
+    position: relative;
+    height: 100px;
+    line-height: 100px;
+   margin-left: 100px;
+
+}
+.header-left .aa {
+    margin-left: 180px;
+}
+.header-left li{
+    float: left;
+    margin-left: 60px;
+}
+.header-left .log {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-top: 18px;
+    margin-left: 60px;
+}
+.header-left .log img{
+    background-color: #ff253a;
+}
+.header-left .aa li{
+    display: block;
+}
+.header-left .aa li a:hover{
+    color:orange;
+}
+.b{
+    width: 100%;
+    height: 0;
+    background-color: #b0b0b0;
+    box-shadow:0 2px 3px #333333;
+   position: absolute;
+    top:100px;
+    left: 0;
+    z-index: 9999;
+}
+.aa li:hover ~.b{
+    height: 200px;
+    transition: height 2s;
+}
+.gwc{
+    float: right;
+  margin-top: -62px;
+    margin-right: 200px;
+    border: 1px solid orange;
+
+}
+.gwc .text1{
+    float: left;
+    border: none;
+    outline: none;
+}
+.gwc .ann{
+    float:left;
+    border: none;
+    outline: none;
+}
+.body{
+   width: 1226px;       /*全部里的DIV都左右浮动会使其没有*/
+    height: 400px;
+
+}
+
+.aside,.nav{
+    float:left;
+}
+.nav{
+    width:200px;
+    background-color: rgba(0, 0, 0, .6);
+    height: 400px;
+}
+.nav li{
+    display: block;
+}
+.nav li a{
+    margin:0 30px;
+    font-size: 14px;
+    height: 42px;
+    line-height:42px;
+    color:#f0f0f0;
+}
+.nav li i{
+    float:right;
+    position: relative; /*  !*相对定位   是根据父元素的一个原始点来定位的  一般都是在左上*!*!*/
+    display: block;
+    top: 13px;
+    margin-right: 20px;
+}
+.nav  li:hover{
+    background-color: orange;
+}
+.aside{
+    position: relative;
+}
+.aside .dian{
+    position:absolute;
+   right: 10px;
+    bottom: 20px;
+
+}
+.aside .dian a{
+    width: 10px;
+    height: 10px;
+    border:2px solid #B8D1EA;
+    background-color:#b0b0b0;
+    float:left;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.foot-left{
+    width: 234px;
+    height: 260px;
+    position: relative;
+    background-color: #5f5750;
+
+}
+
+.foot-right img{
+    width: 316px;
+    height:260px;
+    margin-left: 14px;
+}
+.foot-left,.foot-right li{
+    float:left;
+}
+.foot-left li{
+    color: #cfccca;
+    height: 70px;
+    width: 67px;
+    float: left;
+    line-height: 67px;
+    margin-left: 11px;
+    margin-top: 35px;
+    text-align: center;
+}
+.foot-left li i{
+    display: block;
+}
+.foot-left li a{
+    display: block;
+}
+.foot-left li a:hover{
+   color: #f4f4f4;
+}

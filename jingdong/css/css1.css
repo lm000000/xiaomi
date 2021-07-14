@@ -1,0 +1,263 @@
+.top-bar{
+    height: 40px;
+    background-color: #333;
+}
+.top-bar1{
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;          /*将内部DIV居中*/
+}
+#top1 li{
+    float: left;
+
+}
+#top2 li{
+    float: right;
+
+}
+.top-bar a{
+    color: #b0b0b0;
+    display:block;           /*将其转换为快元素*/
+    margin: 0 8px;
+}
+.top-bar1 a:hover{
+    color:#ffffff;
+}
+.line{
+    margin-top: -1px;        /* 想上走1像素*/
+    color: #424242;
+}
+.car a:hover{
+    color:orangered;
+    background-color:#ffffff;
+}
+.er img{
+    width: 90px;
+    margin: 17px 30px 5px 30px;
+}
+.er{
+    display: none;                   /*将二维码隐藏*/
+    left:780px;
+    background-color: #b0b0b0;
+    width: 150px;
+    height: 150px;
+    position: absolute;       /*设置为绝对   脱离文档流不会影响到父元素   他的宽高不会影响*/
+}
+.er p{
+   line-height: 4px;
+    margin-left: 35px;
+}
+.app{
+    position: relative;
+}
+.app::after{
+   content: '';
+    position: absolute;       /* 方便定位  把他变成块元素  将其显示*/
+    width: 0;
+    height: 0;               /* 将边框里面的内容变为0  边框会变成矩形*/
+    border: 8px solid transparent;      /* 将边框设置为透明*/
+    border-top: none;                 /*将上边框去除   在加上其他的是透明*/
+    border-bottom-color:#ffffff;     /* 设置下边框颜色*/
+    bottom: 0;
+    left:0;
+    right: 0;
+    margin:auto;                    /*  向下居中*/
+    display: none;
+
+}
+
+#er1:hover .er,                      /*将鼠标放到二维码上  显示二维码*/
+.app:hover::after                   /* 放到二维码上显示after*/
+{
+    display: block;
+    z-index: 9998;
+}
+.header1{
+    height: 100px;
+}
+
+.log{
+    float: left;
+    margin-top: 20px;
+}
+ .header1 .log a{
+     background-color: #ff253a;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url(../photo/mi-logo.png);
+     background-position: center;
+}
+ .nav{
+     width: 800px;
+     height: 100px;
+     line-height: 100px;
+     margin-left: 100px;
+ }
+.nav a{
+    display: block;
+}
+.nav li{
+    float: left;
+    margin-left: 50px;
+}
+a:hover{
+    color:crimson;
+}
+.header{
+    position: relative;
+}
+.nav li:not(:nth-child(6)):not(:nth-child(7)):hover ~ .kk,    /*!* 出来第6 7个不会显示    也可以在要出来的区域li添加div*!*/
+.kk:hover
+{
+    height: 150px;
+     box-shadow:0 2px 3px #333333;    /* !**X轴   Y轴  阴影半径   颜色   调整Y轴 将其往下移5px*!*!*/
+
+}
+.kk{
+    background-color: #b0b0b0;
+    position: absolute;
+    width: 100%;   /*!* 参照父元素header*!*/
+    top:100px;
+    height: 0;      /*!*  将其设置为0 用的时候吧他的高度显示出来    不会那种反应慢的效果*!*/
+    left:0;
+    transition: height 0.3s;    /*!* 设置出来的特效*!*/
+    z-index: 9999;     /*!* 不会被盖住*!*/
+}
+.search{
+    width: 296px;
+    height: 50px;
+    float: right;
+    margin-top: -80px;
+    border: 1px solid bisque;
+}
+.search2{
+  float: left;   /*将文本框于按钮没有缝隙*/
+    padding:0 10px;
+    border: none;
+    height: 50px;
+    width: 200px;
+    outline: none;/*取消轮廓线 点击之后不会有轮廓线*/
+}
+.search3{
+  float: left;     /*将文本框于按钮没有缝隙*/
+    border:none;
+    height: 50px;
+    width: 76px;
+    padding: 0;
+    outline: none;
+}
+nav{                 /* 我这里用的是nav  不是DIV  若是在一个DIV里面的DIV全都浮动了  那么要在这个大的DIV里面设置好宽高*/
+    width:200px;
+   background-color: rgba(0, 0, 0, .6);
+    height: 400px;
+}
+.body{
+   height: 400px;
+}
+aside{
+    position: relative;
+    width: 1026px;
+}
+nav,aside{
+    float:left;
+}
+
+nav ul li a{
+    display: block;
+    margin:0 30px;
+    font-size: 14px;
+    height: 42px;
+    line-height:42px;
+    color:#f0f0f0;
+}
+nav li a i{
+    float:right;
+   position: relative; /*  !*相对定位   是根据父元素的一个原始点来定位的  一般都是在左上*!*!*/
+    display: block;
+    top: 13px;
+
+}
+nav li:hover{
+    background-color:orange;
+}
+
+.dian{
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+ }
+.dian a{
+    background-color:#b0b0b0;
+    float: left;               /* 浮动和绝对定位不可以一起用*/
+    display: block;
+    width: 6px;
+    height: 6px;
+    margin: 0 5px;
+    z-index: 9999;
+    border-radius: 50%;
+    border:2px solid #B8D1EA;
+}
+.dian a:nth-child(1){
+    background-color:#f4f4f4;
+}
+.dian a:nth-child(2):hover,
+.dian a:nth-child(3):hover,
+.dian a:nth-child(4):hover{
+    background-color:#f4f4f4;
+}
+
+.foot3 {
+
+    height: 270px;
+}
+.foot1{
+    width: 234px;
+    height: 260px;
+    float: left;
+    background-color: #5f5750;
+    margin-right: 14px;
+}
+.foot1 li{
+    float: left;
+    color: #cfccca;
+    height: 70px;
+    width: 67px;
+    padding-top: 45px;
+    padding-left: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+.foot1 li{
+    display: block;
+}
+.foot1 li a i{
+    display: block;
+}
+.foot2 li{
+    float:left;
+    width: 316px;
+    height:260px;
+    margin-right: 15px;
+}
+.foot2 li:last-child{
+    margin-right: 0;
+}
+.foot2 li img{
+    vertical-align: top;
+    width: 100%;
+    height:260px;
+}
+.foot1 a:hover{
+    color: #f4f4f4;
+
+}
+
+
+
+
+
+
+
+
+
